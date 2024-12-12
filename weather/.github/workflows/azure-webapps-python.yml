@@ -24,6 +24,8 @@ jobs:
           python -m venv venv
           source venv/bin/activate
 
+      - name: Install dependencies
+        run: pip install -r app/requirements.txt
 
       - name: Compress artifact for deployment
         run: zip release.zip ./app/* -r
