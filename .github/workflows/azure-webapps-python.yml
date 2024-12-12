@@ -23,8 +23,10 @@ jobs:
           python -m venv venv
           source venv/bin/activate
 
-      - name: Install dependencies
-        run: pip install -r app/requirements.txt
+      - name: Create requirements.txt
+        run: |
+          echo flask > requirements.txt
+          echo requests >> requirements.txt
 
       - name: Zip artifact for deployment
         run: zip release.zip ./* -r
