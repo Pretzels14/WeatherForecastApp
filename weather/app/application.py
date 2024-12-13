@@ -3,7 +3,6 @@ import requests
 
 
 app = Flask(__name__)
-
 # OpenWeather API Key
 API_KEY = "975ff7bb9b8d75baf9d4e47d59742f74"
 
@@ -43,5 +42,5 @@ def weather():
 
 
 # Run the Flask app
-if __name__ == "__main__":
+if __name__ == '__main__':
     app.run(debug=True)
