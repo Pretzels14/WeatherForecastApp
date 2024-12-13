@@ -1,5 +1,4 @@
 name: Deploy Weather App to Azure Web App
-
 on:
   push:
     branches:
