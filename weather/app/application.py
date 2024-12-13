@@ -1,8 +1,9 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify, send_from_directory
 import requests
 
 
 app = Flask(__name__)
+
 # OpenWeather API Key
 API_KEY = "975ff7bb9b8d75baf9d4e47d59742f74"
 
@@ -10,7 +11,7 @@ API_KEY = "975ff7bb9b8d75baf9d4e47d59742f74"
 # Route to render the home page
 @app.route('/')
 def home():
-    return render_template('main.html')
+    return send_from_directory('.', 'main.html')
 
 # Route to process user inpu
 @app.route('/weather', methods=['POST'])
